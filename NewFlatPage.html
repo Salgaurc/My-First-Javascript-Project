@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="NewFlatPage.css" />
+    <title>New Flat Page</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div class="navbar">
+      <!-- Logo -->
+      <div class="logo-div"></div>
+
+      <div class="greeting-logout-redirect-container">
+        <!-- Redirect Links -->
+        <div class="redirect-links-container">
+          <a href="./../Homepage/homepage.html">Homepage</a>
+          <a href="./../MyFlatsPage/MyFlatsPage.html">My Flats</a>
+        </div>
+
+        <!-- Greeting -->
+        <div class="greeting">
+          <span id="greeting">Hello, User</span>
+        </div>
+
+        <!-- Logout Button -->
+        <div class="logout-btn-div">
+          <button class="logout-btn" onclick="logout()">Log out</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Form Container -->
+    <div class="form-container">
+      <!-- Add New Flat Form -->
+      <div class="add-new-flat-div">
+        <h2>Add new apartment</h2>
+        <form id="addApartmentForm">
+          <div class="form-group">
+            <label for="apartmentName">Name:</label>
+            <input
+              type="text"
+              id="apartmentName"
+              name="apartmentName"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" required />
+          </div>
+          <div class="form-group">
+            <label for="streetName">Street Name:</label>
+            <input type="text" id="streetName" name="streetName" required />
+          </div>
+          <div class="form-group">
+            <label for="streetNumber">Street Number:</label>
+            <input
+              type="number"
+              id="streetNumber"
+              name="streetNumber"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="areaSize">Area Size (&#13217;):</label>
+            <input type="number" id="areaSize" name="areaSize" required />
+          </div>
+          <div class="form-group">
+            <label for="hasAC">Has AC:</label>
+            <select id="hasAC" name="hasAC" required>
+              <option value="true">Yes</option>
+              <option value="false">No</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="yearBuilt">Year Built:</label>
+            <input type="number" id="yearBuilt" name="yearBuilt" required />
+          </div>
+          <div class="form-group">
+            <label for="rentPrice">Rent Price ($):</label>
+            <input type="number" id="rentPrice" name="rentPrice" required />
+          </div>
+          <div class="form-group">
+            <label for="availableDate">Availability Date:</label>
+            <input
+              type="date"
+              id="availableDate"
+              name="availableDate"
+              required
+            />
+          </div>
+          <div>
+            <button type="submit" id="submitBtn">Add Apartment</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Houses Cards Container (Optional for displaying submitted apartments) -->
+    <div id="housesCardsContainer"></div>
+
+    <script src="NewFlatPage.js"></script>
+  </body>
+</html>

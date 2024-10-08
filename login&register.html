@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="login&register.css" />
+    <title>Login & Register</title>
+  </head>
+  <body>
+    <div class="header">
+      <div class="logo-div"></div>
+    </div>
+    <div class="title">
+      <h1>Apartamente spatioase, case grandioase sau garsoniere minimaliste, aici le gasesti pe toate.</h1>
+    </div>
+    <div class="homepage-container">
+      <!-- Buttons for Register and Login -->
+      <div class="button-container" id="buttonContainer">
+        <button class="registerBtn">Register</button>
+        <button class="loginBtn">Login</button>
+      </div>
+    </div>
+    <div class="register-login-container">
+      <!-- Register Form -->
+      <form id="signupForm" class="active hidden">
+        <h2>Sign Up</h2>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+        <div class="error" id="emailError"></div>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required />
+        <div class="error" id="passwordError"></div>
+
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" name="firstName" required />
+        <div class="error" id="firstNameError"></div>
+
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" name="lastName" required />
+        <div class="error" id="lastNameError"></div>
+
+        <label for="birthDate">Birth Date</label>
+        <input type="date" id="birthDate" name="birthDate" required />
+        <div class="error" id="birthDateError"></div>
+
+        <button type="button" onclick="registerUser()">Sign Up</button>
+        <p>Already have an account? <a href="#" id="goToLogin">Log in here</a></p>
+      </form>
+
+      <!-- Login Form -->
+      <form id="loginForm" class="hidden">
+        <h2>Login</h2>
+        <label for="loginEmail">Email</label>
+        <input type="email" id="loginEmail" required />
+        <div class="error" id="loginEmailError"></div>
+
+        <label for="loginPassword">Password</label>
+        <input type="password" id="loginPassword" required />
+        <div class="error" id="loginPasswordError"></div>
+
+        <button type="button" onclick="loginUser()">Login</button>
+        <p>Don't have an account? <a href="#" id="goToRegister">Register here</a></p>
+      </form>
+    </div>
+
+    <script src="./login&register.js"></script>
+  </body>
+</html>

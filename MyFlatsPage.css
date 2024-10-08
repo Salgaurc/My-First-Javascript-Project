@@ -1,0 +1,202 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Bai Jamjuree", sans-serif;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+body {
+  background-image: url(./../Images/bck-img.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+.navbar {
+  width: 100%;
+  height: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(30, 30, 30, 0.1);
+  backdrop-filter: blur(10px);
+  margin-top: 0;
+}
+
+.logo-div {
+  width: 6.5rem;
+  height: 6.5rem;
+  background-image: url(./../Images/logo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+a {
+  font-size: 1.5rem;
+  color: rgb(234, 222, 222); /* Text color of the link */
+  text-decoration: none; /* Remove underline */
+}
+
+a:hover {
+  color: darkblue; /* Color change when the link is hovered */
+  text-decoration: underline; /* Add underline on hover */
+}
+.greeting-logout-redirect-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.redirect-links-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  width: 30%;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+}
+
+.greeting {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  color: rgb(234, 222, 222);
+  padding: 1rem;
+  width: 30%;
+}
+
+.logout-btn-div {
+  display: flex; 
+ justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.logout-btn {
+  width: 9rem;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 1rem 1.5rem; /* Increased padding for a better button size */
+  cursor: pointer;
+  border-radius: 5px; /* Added border radius for smooth corners */
+  font-size: 1.4rem;
+  transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #ff1a1a;
+}
+
+.main-display-container {
+  display: flex;
+  justify-content: center;
+  /* max-height: 100%; */
+}
+#housesCardsContainer {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  gap: 2rem; /* Space between the cards */
+  padding: 2rem; /* Padding around the container */
+  justify-content: space-evenly; /* Distribute cards evenly across the row */
+  align-items: flex-start; /* Align cards to the top */
+  max-width: 100%; /* Ensure content stays within the container */
+  box-sizing: border-box; /* Include padding and borders in the width */
+}
+
+/* Apartment Card */
+.house-card {
+  height: 400px;
+  flex: 1 1 calc(33.33% - 20px); /* Each card takes up roughly 1/3rd of the width */
+  flex-wrap: wrap;
+  max-width: 250px; /* Maximum width for each card */
+  border: 1px solid #ddd; /* Softer border */
+  border-radius: 10px; /* Rounded corners */
+  padding: 1.5rem; /* Increased padding for better spacing */
+  background-color: #fff; /* White background for contrast */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effect */
+  margin: 1rem; /* Adds margin around each card */
+  position: relative;
+}
+
+/* Image inside apartment card */
+.house-card img {
+  width: 100%; /* Make image fully responsive */
+  height: 40%;
+  border-radius: 10px; /* Rounded top corners for the image */
+  object-fit: cover; /* Ensures image covers the space without distortion */
+  padding-bottom: 1.5rem;
+}
+
+.house-card h3 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: #333; /* Darker color for better readability */
+}
+
+.house-card p {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+  color: #666; /* Softer color for secondary text */
+}
+
+.house-card button {
+  width: 80%;
+  background-color: #ff6b6b; /* Eye-catching button color */
+  color: white;
+  border: none;
+  padding: 1rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 1rem;
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+.house-card button:hover {
+  background-color: #ff4a4a; /* Slightly darker shade on hover */
+}
+
+/* Hover effect for the apartment card */
+.house-card:hover {
+  transform: translateY(-5px); /* Slight upward movement */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Favorite and Delete Button Styling */
+.favoriteButton,
+.deleteButton {
+  display: block;
+  margin-top: 1rem;
+}
+
+@media (max-width: 500px) {
+  .house-card {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 455px) {
+  .house-card {
+    flex: 1 1 100%;
+  }
+}

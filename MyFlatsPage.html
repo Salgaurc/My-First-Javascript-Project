@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="MyFlatsPage.css" />
+    <title>My Flats Page</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div class="navbar">
+      <!-- Logo -->
+      <div class="logo-div"></div>
+
+      <div class="greeting-logout-redirect-container">
+        <!-- Redirect Links -->
+        <div class="redirect-links-container">
+          <a href="./../Homepage/homepage.html">Homepage</a>
+          <a href="./../New Flat Page/NewFlatPage.html">Add flat</a>
+        </div>
+
+        <!-- Greeting -->
+        <div class="greeting">
+          <span id="greeting">Hello, User</span>
+        </div>
+
+        <!-- Logout Button -->
+        <div class="logout-btn-div">
+          <button class="logout-btn" onclick="logout()">Log out</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Display Container for Flats -->
+    <div class="main-display-container">
+      <div id="housesCardsContainer">
+        <!-- Flats will be dynamically inserted here by JavaScript -->
+      </div>
+    </div>
+
+    <script src="MyFlatsPage.js"></script>
+  </body>
+</html>
